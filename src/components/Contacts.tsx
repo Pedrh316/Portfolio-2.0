@@ -21,7 +21,7 @@ const SLabel = styled.label`
 const Contact = ({src, children}:{src:string, children:ReactNode}) => {
     return (
         <article style={{marginBottom:'2rem', display:'flex', gap:'2rem', alignItems:'center', fontStyle:'normal'}}>
-            <img src={src}/>
+            <img src={src} aria-hidden={true}/>
             <DefaultText>{children}</DefaultText>
         </article>
     )
@@ -54,7 +54,6 @@ const Contacts = () => {
         })
         .catch(e => console.log('ocorreu um erro ao enviar email', e))
     }
-console.log(formData)
     const onChangeHandler = (e:ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, prop:keyof TemplateParams) => setFormData((pd) => {
         pd[prop] = e.target.value;
         return {...pd};
@@ -64,7 +63,7 @@ console.log(formData)
         <>            
             {
                 submitted ? 
-                <ToastNotification right={true} bottom={true} duration={4} lineColor='green' bgColor='#afa'>
+                <ToastNotification right={true} bottom={true} dependencyRenderStateSetter={setSubmitted} duration={4} lineColor='green' bgColor='#afa'>
                     <p style={{color:'var(--darkgrey)'}}>Email enviado com sucesso</p>
                 </ToastNotification> 
                 : 

@@ -13,7 +13,7 @@ const Header = () => {
                 <div style={{display:'flex', margin:'auto' ,flexWrap:'wrap', gap:'2rem'}}>
                 
                     <div style={{display:'flex', flexGrow:1, justifyContent:'center'}}>
-                        <img src={profileImage} style={{
+                        <img aria-hidden={true} src={profileImage} style={{
                             width:'250px',
                             height:'250px',
                             objectFit:'cover',

@@ -29,7 +29,7 @@ const Left = () => {
             alignItems:'center',
             gap:'1rem',
         }}>
-            <img style={{paddingBlock:'.3rem'}} onClick={clickHandler} width='30px' src={darkMode ? sunImage : moonImage}/>
+            <button aria-label={darkMode ? "tema escuro" : "tema claro"}><img style={{paddingBlock:'.3rem'}} onClick={clickHandler} width='30px' src={darkMode ? sunImage : moonImage}/></button>
             <NavButton to="/">Portfolio</NavButton>
         </div>
     )

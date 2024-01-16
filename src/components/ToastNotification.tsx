@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Children } from '../types/Children'
 
@@ -10,6 +10,7 @@ interface IToastNotification extends Children{
     right?:boolean
     bottom?:boolean
     left?:boolean
+    dependencyRenderStateSetter:React.Dispatch<React.SetStateAction<boolean>>
 }
 
 type SLineProps = Pick<IToastNotification, 'duration' | 'lineColor'>
@@ -39,7 +40,7 @@ const SToastNotification = styled.article<SToastNotificationProps>`
 `
 
 
-const ToastNotification = ({bgColor, lineColor, duration, children, top, right, bottom, left}:IToastNotification) => {
+const ToastNotification = ({bgColor, lineColor, duration, children, top, right, bottom, left, dependencyRenderStateSetter}:IToastNotification) => {
 
     const [show, setShow] = useState(true);
     const position = {top,right,bottom,left};
@@ -52,6 +53,7 @@ const ToastNotification = ({bgColor, lineColor, duration, children, top, right, 
     useEffect(() => {
         setTimeout(() => {
             setShow(false);
+            dependencyRenderStateSetter(false);
         }, (duration ? duration * 1000 : 5000))
     }, [])
 

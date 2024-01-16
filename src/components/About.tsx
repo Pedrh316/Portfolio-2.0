@@ -12,7 +12,6 @@ const About = () => {
     const birthday = new Date(2005, 4, 6);
 
     const year = new Date();
-    console.log(birthday.getTime());
     year.setTime(today.getTime() - birthday.getTime());    
 
     const age = Math.floor(year.getTime() / 1000 / 60 / 60 / 24 / 365);
