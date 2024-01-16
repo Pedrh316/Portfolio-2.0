@@ -1,8 +1,22 @@
+import styled from "styled-components"
+import DefaultText from "./fonts/DefaultText"
+
+const SPresent = styled.section`
+    position:fixed;
+    padding:2rem;
+    border-radius:2rem;
+    background-color:${({theme}) => theme.majorContrast};
+
+    p{
+        text-indent:0;
+    }
+`
+
 const Present = () => {
   return (
-    <section>
-
-    </section>
+    <SPresent>
+        <DefaultText>Infelizmente ainda há um recurso adicionado...</DefaultText>
+    </SPresent>
   )
 }
 

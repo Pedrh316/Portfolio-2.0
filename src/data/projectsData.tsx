@@ -12,12 +12,17 @@ export const projectsData:IProject[] = [
     },
     {
         name:'Autenticação',
-        description:'Implementação de rotas de navegação privadas e publicas com  e  Router Dom.',
+        description:'Implementação de rotas de navegação privadas e publicas com NodeJs e React Router Dom.',
         link:'https://github.com/Pedrh316/Authenticacao'
     },
     {
         name:'Agenda',
-        description:'Simulação de um agendamento virtual com Typescript,  e lógica de programação.',
+        description:'Simulação de um agendamento virtual com Typescript, React e lógica de programação.',
         link:'https://github.com/Pedrh316/Agenda'
+    },
+    {
+        name:'Portfolio antigo',
+        description:'Demonstração de minhas habilidades em html, css, animações, responsividade, javascript, lógica de programação, etc.',
+        link:'https://github.com/Pedrh316/Portfolio'
     }
 ]

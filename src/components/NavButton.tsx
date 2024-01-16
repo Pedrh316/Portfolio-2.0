@@ -33,7 +33,7 @@ interface INavButton {
 
 const NavButton = ({children, to}:INavButton) => {
   return (
-    <SNavButton href={to}>
+    <SNavButton href={to} target="_self">
         {children}
         <SLine></SLine>
     </SNavButton>

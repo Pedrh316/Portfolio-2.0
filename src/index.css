@@ -60,6 +60,7 @@
 html{
     font-size: 16px;
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
 }
 
 
@@ -131,6 +132,8 @@ button{
     inset:0;
     background-color:#00000055;
     animation:appearanceOverlay .2s linear;
+    display:grid;
+    place-items: center;
     z-index:99999999;
 }
 

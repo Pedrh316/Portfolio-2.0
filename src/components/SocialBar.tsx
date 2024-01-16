@@ -9,6 +9,7 @@ import linkedinImage from "../assets/icons/linkedin-icon.svg"
 
 interface ISocialItemProps extends Children {
     to:string,
+    target?:string,
 }
 
 const SSocialBar = styled.section`
@@ -34,9 +35,9 @@ const SSocialItem = styled.a`
     }
 `
 
-const SocialItem = ({to, children}:ISocialItemProps) => {
+const SocialItem = ({to, children, target}:ISocialItemProps) => {
     return (
-        <SSocialItem href={to} target="_blank">{children}</SSocialItem>
+        <SSocialItem href={to} target={target ?? "_blank"}>{children}</SSocialItem>
     )
 }
 
@@ -45,7 +46,7 @@ const SocialBar = () => {
   return (
     <SSocialBar id='social-bar'>
         <SocialItem to="https://github.com/Pedrh316"><img src={githubImage}/></SocialItem>
-        <SocialItem to="mailto:cpedrh@gmail.com"><img src={gmailImage}/></SocialItem>
+        <SocialItem to="/#contact" target={"_self"}><img src={gmailImage}/></SocialItem>
         <SocialItem to="https://www.linkedin.com/in/pedro-costa-883356244/"><img src={darkMode ? linkedinDarkImage : linkedinImage}/></SocialItem>
     </SSocialBar>
   )

@@ -2,9 +2,11 @@ export const skillsData:string[] = [
     'HTML',
     'Javascript',
     'CSS',
+    'React',
+    'Typescript',
     'Github',
     'Firebase',
-    ' Native',
+    'React Native',    
     'NodeJs',
     'Figma'
 ]

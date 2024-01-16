@@ -10,6 +10,7 @@ const SProject = styled.article`
         align-items:center;
         gap:1rem;
         box-sizing:border-box;
+        transition:background-color .2s linear;
 `
 
 const Project = ({children}:Children) => {
