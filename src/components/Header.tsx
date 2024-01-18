@@ -45,7 +45,7 @@ const Header = () => {
                                 }}>Costa</span>
                             </div>
                         </DefaultTitle>
-                        <Button.Bigger onClick={() => window.open('../../assets/Currículo.pdf')}>Currículo</Button.Bigger>
+                        <Button.Bigger onClick={() => window.open('../assets/Currículo.pdf')}>Currículo</Button.Bigger>
                     </div>
 
                 </div>
