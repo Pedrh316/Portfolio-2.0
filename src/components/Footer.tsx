@@ -12,11 +12,11 @@ const SFooter = styled.footer`
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
-  return (
-    <SFooter>
-        <p>Copyright&copy;{currentYear}</p>
-    </SFooter>
-  )
+    return (
+        <SFooter>
+            <p>Copyright&copy;{currentYear}</p>
+        </SFooter>
+    )
 }
 
 export default Footer

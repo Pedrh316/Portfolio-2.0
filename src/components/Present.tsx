@@ -15,7 +15,7 @@ const SPresent = styled.section`
 const Present = () => {
   return (
     <SPresent>
-        <DefaultText>Infelizmente ainda há um recurso adicionado...</DefaultText>
+        <DefaultText>Infelizmente ainda não há um recurso adicionado...</DefaultText>
     </SPresent>
   )
 }
